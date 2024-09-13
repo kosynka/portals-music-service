@@ -36,8 +36,10 @@ func GetMusicList(c *gin.Context) {
 
 	c.JSON(
 		http.StatusOK, gin.H{
-			"status":  "success",
-			"context": buildMusicList(contents, bucketURL),
+			"status": "success",
+			"context": gin.H{
+				"music": buildMusicList(contents, bucketURL),
+			},
 		},
 	)
 }
