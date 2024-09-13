@@ -9,7 +9,7 @@ import (
 func SetupRoutes() *gin.Engine {
 	r := gin.Default()
 
-	r.GET("api/v1/musics", handlers.GetMusicList)
+	r.GET("api/v2/musics", handlers.GetMusicList)
 
 	return r
 }
